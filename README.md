@@ -2,6 +2,9 @@
 
 An AI-powered research assistant that answers questions using content extracted from user-provided URLs.
 
+🚀 **[Try WebWise AI Live](https://webwise-ai-9kpzeznnatoe2zkxmzrwqo.streamlit.app/)**
+
+
 ### Features
 - Process multiple website URLs
 - Ask questions in natural language
