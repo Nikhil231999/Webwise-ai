@@ -61,10 +61,14 @@ def process_urls(urls):
         chunk_size=CHUNK_SIZE
     )
     docs = text_splitter.split_documents(data)
-
-    yield "Add chunks to vector database...✅"
+    
+    
+    if not docs:
+        raise ValueError("No text was extracted from the provided URLs.")
+    yield f"Adding {len(docs)} chunks to vector database...✅"
     uuids = [str(uuid4()) for _ in range(len(docs))]
     vector_store.add_documents(docs, ids=uuids)
+    
 
     yield "Done adding docs to vector database...✅"
 
